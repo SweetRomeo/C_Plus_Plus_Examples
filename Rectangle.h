@@ -13,6 +13,7 @@ public:
     void setLength(int length);
     int getBreadth() const;
     void setBreadth(int breadth);
+    int area() const;
 };
 
 #endif //RECTANGLE_H

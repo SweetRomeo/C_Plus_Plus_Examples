@@ -14,6 +14,7 @@ public:
     int getBreadth() const;
     void setBreadth(int breadth);
     int area() const;
+    int perimeter() const;
 };
 
 #endif //RECTANGLE_H

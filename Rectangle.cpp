@@ -12,6 +12,18 @@ int Rectangle::getLength() const {
     return this->length;
 }
 
-int Rectangle::getBreadth() const {
+void Rectangle::setLength(const int length) {
+    this->length = length;
+}
 
+int Rectangle::getBreadth() const {
+    return this->breadth;
+}
+
+void Rectangle::setBreadth(const int breadth) {
+    this->breadth = breadth;
+}
+
+int Rectangle::area() const {
+    return length * breadth;
 }

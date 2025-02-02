@@ -27,3 +27,7 @@ void Rectangle::setBreadth(const int breadth) {
 int Rectangle::area() const {
     return length * breadth;
 }
+
+int Rectangle::perimeter() const {
+    return 2 * (length + breadth);
+}

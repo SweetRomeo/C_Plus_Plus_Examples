@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(C_Plus_Plus_Examples main.cpp
         Rectangle.h
-        Rectangle.cpp)
+        Rectangle.cpp
+        Date.h
+        Date.cpp)

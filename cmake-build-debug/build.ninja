@@ -67,6 +67,12 @@ build CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj: CXX_COMPILER__C_Plus_Plu
   OBJECT_DIR = CMakeFiles\C_Plus_Plus_Examples.dir
   OBJECT_FILE_DIR = CMakeFiles\C_Plus_Plus_Examples.dir
 
+build CMakeFiles/C_Plus_Plus_Examples.dir/NumberUtil.cpp.obj: CXX_COMPILER__C_Plus_Plus_Examples_unscanned_Debug C$:/Users/berke/CLionProjects/C_Plus_Plus_Examples/NumberUtil.cpp || cmake_object_order_depends_target_C_Plus_Plus_Examples
+  DEP_FILE = CMakeFiles\C_Plus_Plus_Examples.dir\NumberUtil.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\C_Plus_Plus_Examples.dir
+  OBJECT_FILE_DIR = CMakeFiles\C_Plus_Plus_Examples.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target C_Plus_Plus_Examples
@@ -75,7 +81,7 @@ build CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj: CXX_COMPILER__C_Plus_Plu
 #############################################
 # Link the executable C_Plus_Plus_Examples.exe
 
-build C_Plus_Plus_Examples.exe: CXX_EXECUTABLE_LINKER__C_Plus_Plus_Examples_Debug CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj CMakeFiles/C_Plus_Plus_Examples.dir/Rectangle.cpp.obj CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj
+build C_Plus_Plus_Examples.exe: CXX_EXECUTABLE_LINKER__C_Plus_Plus_Examples_Debug CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj CMakeFiles/C_Plus_Plus_Examples.dir/Rectangle.cpp.obj CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj CMakeFiles/C_Plus_Plus_Examples.dir/NumberUtil.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\C_Plus_Plus_Examples.dir

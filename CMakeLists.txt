@@ -7,4 +7,6 @@ add_executable(C_Plus_Plus_Examples main.cpp
         Rectangle.h
         Rectangle.cpp
         Date.h
-        Date.cpp)
+        Date.cpp
+        NumberUtil.h
+        NumberUtil.cpp)

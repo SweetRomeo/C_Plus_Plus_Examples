@@ -16,5 +16,6 @@ public:
     static bool isPrime(int val);
     static bool isPrimeX(int val);
     static double getENumber();
+    static void printDiamond(int n);
 };
 #endif //NUMBERUTIL_H

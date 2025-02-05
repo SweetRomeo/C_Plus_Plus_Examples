@@ -2,13 +2,9 @@
 
 #include "BallGame.h"
 #include "Date.h"
+#include "NumberUtil.h"
 
 int main() {
-    try {
-        BallGame::run();
-    }
-    catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
+    NumberUtil::printDiamond(6);
     return 0;
 }

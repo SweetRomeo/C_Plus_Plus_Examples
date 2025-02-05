@@ -4,6 +4,8 @@
 
 #include "NumberUtil.h"
 
+#include <iostream>
+
 int NumberUtil::signum(int val)
 {
     if (val < 0)
@@ -107,5 +109,30 @@ double NumberUtil::getENumber() {
     return e;
 }
 
+void NumberUtil::printDiamond(int n) {
+    bool directionFlag = true;
+    int index = 0;
+    while (true) {
+        for (int i = 0; i < n - index; ++i) {
+            std::cout << " ";
+        }
+        for (int i = 0; i < 2 * index + 1; ++i) {
+            std::cout << "*";
+        }
+        if (directionFlag) {
+            index++;
+        }
+        else {
+            index--;
+        }
+        if (index == n) {
+            directionFlag = false;
+        }
+        if (index < 0) {
+            break;
+        }
+        std::cout << "\n";
 
+    }
 
+}

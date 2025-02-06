@@ -17,5 +17,17 @@ public:
     static bool isPrimeX(int val);
     static double getENumber();
     static void printDiamond(int n);
+    static void printFactors(int val);
+    static int sumFactors(int val);
+    static bool isPerfect(int val);
+    static int reverse(int val);
+    static bool isValid(int val);
+    static int getOnes(int val);
+    static int getTens(int val);
+    static int getHundreds(int val);
+    static int calculateDigitalRoot(int val);
+    static bool isFactorian(int val);
+    static bool isSuperPrime(int val);
+    static void isSuperPrimeTest();
 };
 #endif //NUMBERUTIL_H

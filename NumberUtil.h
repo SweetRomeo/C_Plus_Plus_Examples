@@ -29,5 +29,9 @@ public:
     static bool isFactorian(int val);
     static bool isSuperPrime(int val);
     static void isSuperPrimeTest();
+    static double crapsGame(int numberOfPlays);
+    static void crapsGameTest();
+    static void displayCollatz(int val);
+    static void Operation();
 };
 #endif //NUMBERUTIL_H

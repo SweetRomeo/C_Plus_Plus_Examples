@@ -5,6 +5,8 @@
 #include "NumberUtil.h"
 
 #include <iostream>
+#include <random>
+#include <climits>
 
 int NumberUtil::signum(int val)
 {
@@ -227,4 +229,97 @@ void NumberUtil::isSuperPrimeTest() {
             std::cout << i << std::endl;
         }
     }
+}
+
+double NumberUtil::crapsGame(int numberOfPlays) {
+    std::random_device rd;
+    std::mt19937 diceFirst(rd());
+    std::mt19937 diceSecond(rd());
+    std::uniform_int_distribution<int> distributionFirst(1, 6);
+    std::uniform_int_distribution<int> distributionSecond(1, 6);
+    int numberOfWins = 0;
+    for (int i = 0; i < numberOfPlays; ++i) {
+        int dice1 = distributionFirst(diceFirst);
+        int dice2 = distributionSecond(diceSecond);
+        if (dice1 + dice2 == 7 || dice1 + dice2 == 11) {
+            ++numberOfWins;
+        }
+        else if (dice1 + dice2 == 2 || dice1 + dice2 == 3 || dice1 + dice2 == 12)
+            ;
+        else {
+            int tempDice = dice1 + dice2;
+            while (true) {
+                dice1 = distributionFirst(diceFirst);
+                dice2 = distributionSecond(diceSecond);
+                if (dice1 + dice2 == 7) {
+                    break;
+                }
+                if (dice1 + dice2 == tempDice) {
+                    ++numberOfWins;
+                    break;
+                }
+            }
+        }
+    }
+    return static_cast<double>(numberOfWins) / numberOfPlays;
+}
+
+void NumberUtil::crapsGameTest() {
+    int numberOfPlays;
+    std::cout << "Enter number of plays: ";
+    std::cin >> numberOfPlays;
+    std::cout << "Chance to win to the craps game: " << crapsGame(numberOfPlays) << std::endl;
+}
+
+void NumberUtil::displayCollatz(int val) {
+    if (val == 1)
+        return;
+    std::cout << val << " ";
+    while (true) {
+        if (val == 1) {
+            break;
+        }
+        val = val % 2 == 0 ? val / 2 : 3 * val + 1;
+        std::cout << val << " ";
+    }
+}
+
+void NumberUtil::Operation() {
+    int count = 0;
+    int sum = 0;
+    int max = INT_MIN;
+    int min = INT_MAX;
+    while (true) {
+        char ch;
+        std::cout << "Yeni bir deger girmek istiyor musunuz?\n";
+        while ((ch = getchar()) != '1' && ch != '0')
+            ;
+        if (ch == '1') {
+            int val;
+            std::cout << "Bir tamsayi giriniz:";
+            jump:
+            std::cin >> val;
+            if (val < 0 || val > 100) {
+                std::cout << "Gecersiz giris\n";
+                std::cout << "Yeni bir deger giriniz:";
+                goto jump;
+            }
+            if (val > max) {
+                max = val;
+            }
+            if (val < min) {
+                min = val;
+            }
+            sum += val;
+            count++;
+        }
+        else {
+            break;
+        }
+    }
+    std::cout << "Toplam " << count << " deger girildi.\n";
+    std::cout << "Max = " << max << "\n";
+    std::cout << "Min = " << min << "\n";
+    std::cout << "Ortalama = " << static_cast<double>(sum) / count << "\n";
+    std::cout << "Program sonlandi\n";
 }

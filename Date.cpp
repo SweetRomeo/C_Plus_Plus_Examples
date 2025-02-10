@@ -24,6 +24,10 @@ Date& Date::operator=(const Date &other) {
     return *this;
 }
 
+int Date::operator-(const Date& other) const {
+    return getTotalDaysFromDate(*this) - getTotalDaysFromDate(other);
+}
+
 bool Date::isLeapYear(const int year) {
     return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 }
@@ -65,7 +69,7 @@ bool Date::isValidDate() const {
 }
 
 
-int Date::getDayOfYear() {
+int Date::getDayOfYear() const {  // const eklenmiş
     if (!isValidDate()) {
         throw std::invalid_argument("Invalid Date");
     }
@@ -97,7 +101,7 @@ int Date::getDayOfYear() {
     return daysOfMonths;
 }
 
-int Date::getDayOfWeek() {
+int Date::getDayOfWeek() const {
     if (this->year < 1900 || !isValidDate()) {
         throw std::invalid_argument("Invalid Date");
     }
@@ -108,7 +112,7 @@ int Date::getDayOfWeek() {
     return totalDays % 7;
 }
 
-void Date::printDayOfWeek() {
+void Date::printDayOfWeek() const{
     displayDate();
     switch (getDayOfWeek()) {
         case 0:
@@ -134,3 +138,10 @@ void Date::printDayOfWeek() {
     }
 }
 
+int Date::getTotalDaysFromDate(const Date &date) const {  // const eklenmiş
+    int totalDays = date.getDayOfYear();  // date nesnesi için getDayOfYear çağrısı
+    for (int y = 0; y < date.year; ++y) {
+        totalDays += isLeapYear(y) ? 366 : 365;
+    }
+    return totalDays;
+}

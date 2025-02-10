@@ -12,4 +12,6 @@ add_executable(C_Plus_Plus_Examples main.cpp
         NumberUtil.cpp
         BallGame.h
         BallGame.cpp
+        ArrayUtil.h
+        ArrayUtil.cpp
 )

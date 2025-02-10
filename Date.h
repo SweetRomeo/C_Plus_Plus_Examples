@@ -19,19 +19,26 @@ public:
 
     Date &operator=(const Date &other);
 
-    int operator-(const Date& date) const;
+    int operator-(const Date &other) const;
     void setDay(int day);
-    int getDay() const;
+    [[nodiscard]] int getDay() const;
     void setMonth(int month);
-    int getMonth() const;
+    [[nodiscard]] int getMonth() const;
     void setYear(int year);
     int getYear() const;
     void displayDate()const;
     static bool isLeapYear(int year) ;
-    bool isValidDate() const;
+    [[nodiscard]] bool isValidDate() const;
+
+    int getDayOfYear() const;
+
+    int getDayOfWeek() const;
+
+    void printDayOfWeek() const;
 
     int getDayOfYear();
     int getDayOfWeek();
     void printDayOfWeek();
+    int getTotalDaysFromDate(const Date &date) const;
 };
 #endif //DATEUTIL_H

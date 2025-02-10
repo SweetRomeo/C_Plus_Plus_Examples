@@ -1,9 +1,12 @@
 #include <iostream>
 
+#include "Date.h"
 #include "NumberUtil.h"
 
 int main() {
-    NumberUtil::displayCollatz(72543);
-    NumberUtil::displayCollatz(1732);
+    //NumberUtil::Operation();
+    Date d1{12,2,2019};
+    Date d2{11,2,2019};
+    std::cout << d1-d2 << std::endl;
     return 0;
 }

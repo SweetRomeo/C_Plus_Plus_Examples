@@ -151,3 +151,58 @@ void ArrayUtil::quickSort(int *arr, const size_t size) {
         }
     }
 }
+
+int ArrayUtil::LinearSearch(const int *arr, const int size, int value) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int ArrayUtil::BinarySearch(const int *arr, const int size, int value) {
+    int low = 0;
+    int high = size - 1;
+    int mid = (low + high) / 2;
+    while (low <= high) {
+        if (arr[mid] == value) {
+            return mid;
+        }
+        if (arr[mid] < value) {
+            low = mid + 1;
+        } else if (arr[mid] > value) {
+            high = mid - 1;
+        }
+    }
+    return -1;
+}
+
+int ArrayUtil::BinarySearchTest() {
+    int size;
+    std::cout << "Enter size of array: ";
+    std::cin >> size;
+    int *arr = new int[size];
+    bool isSorted = isSorted();
+    int searchValue;
+    std::cout << "Enter searching element:\n";
+    std::cin >> searchValue;
+    if (isSorted) {
+        int index = BinarySearch(arr, size, searchValue);
+        if (index == -1) {
+            std::cout << "Element not found\n";
+        } else {
+            std::cout << "Element found at index " << index << "\n";
+        }
+    }
+    else {
+        int index = LinearSearch(arr, size, searchValue);
+        if (index == -1) {
+            std::cout << "Element not found\n";
+        }
+        else {
+            std::cout << "Element found at index " << index << "\n";
+        }
+    }
+}
+

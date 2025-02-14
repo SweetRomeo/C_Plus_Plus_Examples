@@ -22,6 +22,8 @@ public:
     static void selectionSort(int* arr, size_t size);
     static void insertionSort(int* arr, size_t size);
     static void quickSort(int* arr, size_t size);
-
+    static int LinearSearch(const int* arr, int size, int value);
+    static int BinarySearch(const int* arr, int size, int value);
+    static int BinarySearchTest();
 };
 #endif //ARRAYUTIL_H

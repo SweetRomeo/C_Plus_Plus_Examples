@@ -15,6 +15,7 @@ public:
     static void reverseArray(int* arr, size_t size);
     static bool isSorted(const int* arr, size_t size);
     static int getMax(const int* arr, size_t size);
+    static int getSecondMax(const int* arr, size_t size);
     static int getMin(const int* arr, size_t size);
     static int getSum(const int* arr, size_t size);
     static int getMode(const int* arr, size_t size);
@@ -22,8 +23,10 @@ public:
     static void selectionSort(int* arr, size_t size);
     static void insertionSort(int* arr, size_t size);
     static void quickSort(int* arr, size_t size);
+    static double mean(const int* arr, size_t size);
+    static double standardDeviation(const int* arr, size_t size);
     static int LinearSearch(const int* arr, int size, int value);
     static int BinarySearch(const int* arr, int size, int value);
-    static int BinarySearchTest();
+    static void BinarySearchTest();
 };
 #endif //ARRAYUTIL_H

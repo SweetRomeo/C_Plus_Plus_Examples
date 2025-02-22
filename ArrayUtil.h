@@ -22,6 +22,5 @@ public:
     static void selectionSort(int* arr, size_t size);
     static void insertionSort(int* arr, size_t size);
     static void quickSort(int* arr, size_t size);
-
 };
 #endif //ARRAYUTIL_H

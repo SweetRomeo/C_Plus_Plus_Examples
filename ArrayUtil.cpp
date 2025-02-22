@@ -69,6 +69,22 @@ int ArrayUtil::getMax(const int *arr, const size_t size) {
     return max;
 }
 
+int ArrayUtil::getSecondMax(const int *arr, size_t size) {
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    int secondMax = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (secondMax < arr[i] && arr[i] < max) {
+            secondMax = arr[i];
+        }
+    }
+    return secondMax;
+}
+
 int ArrayUtil::getMin(const int *arr, const size_t size) {
     int min = arr[0];
     for (int i = 1; i < size; i++) {
@@ -161,6 +177,27 @@ int ArrayUtil::LinearSearch(const int *arr, const int size, int value) {
     return -1;
 }
 
+double ArrayUtil::mean(const int *arr, size_t size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return static_cast<double>(sum) / static_cast<int>(size);
+}
+
+double ArrayUtil::standardDeviation(const int *arr, const size_t size) {
+    double mean = 0;
+    for (int i = 0; i < size; i++) {
+        mean += arr[i];
+    }
+    mean /= static_cast<int>(size);
+    double standardDeviation = 0;
+    for (int i = 0; i < size; i++) {
+        standardDeviation += pow((arr[i] - mean), 2);
+    }
+    return std::sqrt(standardDeviation);
+}
+
 int ArrayUtil::BinarySearch(const int *arr, const int size, int value) {
     int low = 0;
     int high = size - 1;
@@ -178,7 +215,7 @@ int ArrayUtil::BinarySearch(const int *arr, const int size, int value) {
     return -1;
 }
 
-int ArrayUtil::BinarySearchTest() {
+void ArrayUtil::BinarySearchTest() {
     int size;
     std::cout << "Enter size of array: ";
     std::cin >> size;
@@ -205,4 +242,5 @@ int ArrayUtil::BinarySearchTest() {
         }
     }
 }
+
 

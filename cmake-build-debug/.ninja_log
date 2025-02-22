@@ -1,18 +1,8 @@
 # ninja log v6
 35	198	7602291293844400	CMakeFiles/C_Plus_Plus_Examples.dir/Rectangle.cpp.obj	6e355eda153d14a0
 7	1121	7607468607655301	CMakeFiles/C_Plus_Plus_Examples.dir/NumberUtil.cpp.obj	7160ef848aa2e0f9
-7	864	7609126096927117	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
-9	978	7609127058524943	CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj	3d690a2508c70316
-979	1138	7609127068223529	C_Plus_Plus_Examples.exe	c887ad6dc28bcfb4
-12	702	7604819141901948	CMakeFiles/C_Plus_Plus_Examples.dir/BallGame.cpp.obj	b3e57f4d86248af4
-61	955	7611715072251918	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
-72	1084	7611715072354719	CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj	3d690a2508c70316
-7	744	7611716079968878	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
-14	1040	7611716080039429	CMakeFiles/C_Plus_Plus_Examples.dir/ArrayUtil.cpp.obj	603617f62e985bc6
-1041	1386	7611716090296066	C_Plus_Plus_Examples.exe	921bc4f14dd852d7
-8	694	7611716790195050	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
-695	829	7611716797065396	C_Plus_Plus_Examples.exe	921bc4f14dd852d7
-6	738	7611716964169077	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
-739	888	7611716971496706	C_Plus_Plus_Examples.exe	921bc4f14dd852d7
 7	1084	7611717269678521	CMakeFiles/C_Plus_Plus_Examples.dir/ArrayUtil.cpp.obj	603617f62e985bc6
+6	738	7611716964169077	CMakeFiles/C_Plus_Plus_Examples.dir/main.cpp.obj	49f99e028647b69c
+72	1084	7611715072354719	CMakeFiles/C_Plus_Plus_Examples.dir/Date.cpp.obj	3d690a2508c70316
 1084	1221	7611717280463767	C_Plus_Plus_Examples.exe	921bc4f14dd852d7
+12	702	7604819141901948	CMakeFiles/C_Plus_Plus_Examples.dir/BallGame.cpp.obj	b3e57f4d86248af4

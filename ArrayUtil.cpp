@@ -219,12 +219,13 @@ void ArrayUtil::BinarySearchTest() {
     int size;
     std::cout << "Enter size of array: ";
     std::cin >> size;
-    int *arr = new int[size];
-    bool isSorted = isSorted();
+    const auto arr = new int[size];
+    setRandomArray(arr, size);
+    bool isSortedCheck = isSorted(arr, size);
     int searchValue;
     std::cout << "Enter searching element:\n";
     std::cin >> searchValue;
-    if (isSorted) {
+    if (isSortedCheck) {
         int index = BinarySearch(arr, size, searchValue);
         if (index == -1) {
             std::cout << "Element not found\n";
@@ -241,6 +242,7 @@ void ArrayUtil::BinarySearchTest() {
             std::cout << "Element found at index " << index << "\n";
         }
     }
+    delete[] arr;
 }
 
 

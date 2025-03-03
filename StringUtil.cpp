@@ -88,3 +88,25 @@ void StringUtil::textInnerParenthesisTest() {
     std::cout << textInnerParenthesis(test2.c_str()) << '\n';
     std::cout << textInnerParenthesis(test3.c_str()) << '\n';
 }
+
+void StringUtil::printText(const char *str) {
+    int len = Length(str);
+    char* temp = new char[len + 1];
+
+    for (int i = 0; i < len; i++) {
+        temp[i] = str[i];
+        temp[i + 1] = '\0';
+        std::cout << temp << '\n';
+    }
+    delete[] temp;
+}
+
+
+void StringUtil::printText(std::string &str) {
+    std::string temp;
+    for (auto it = str.begin(); it != str.end(); ++it) {
+        temp += *it;
+        std::cout << temp << '\n';
+    }
+}
+

@@ -15,5 +15,7 @@ public:
     static char* textInnerParenthesis(const char* str);
     static decltype(auto) textInnerParenthesis(const std::string& str);
     static void textInnerParenthesisTest();
+    static void printText(const char* str);
+    static void printText(std::string& str);
 };
 #endif //STRINGUTIL_H

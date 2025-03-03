@@ -26,6 +26,9 @@ int main() {
 
     auto secMax = ArrayUtil::getSecondMax(arr, SIZE);
     std::cout << secMax << std::endl;*/
+    std::string text{"Berke"};
+    StringUtil::printText(text);
+    StringUtil::printText("Berke");
     StringUtil::textInnerParenthesisTest();
     ListNode *head = nullptr;
     ListNode *current = nullptr;

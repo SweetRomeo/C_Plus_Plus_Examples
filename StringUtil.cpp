@@ -20,8 +20,6 @@ decltype(auto) StringUtil::Length(const std::string &str) {
     return len;
 }
 
-
-
 void StringUtil::reverseString(char *str) {
     const auto len = Length(str);
     for (auto i = 0; i < len / 2; i++) {
@@ -110,3 +108,15 @@ void StringUtil::printText(std::string &str) {
     }
 }
 
+bool StringUtil::isValidUsername(std::string str) {
+    int len = Length(str);
+    if (len < 4 || len > 25 || !isalpha(str[0]) || str[len - 1] == '_') {
+        return false;
+    }
+    for (char ch : str) {
+        if (!isalnum(ch) && ch != '_') {
+            return false;
+        }
+    }
+    return true;
+}

@@ -17,5 +17,6 @@ public:
     static void textInnerParenthesisTest();
     static void printText(const char* str);
     static void printText(std::string& str);
+    static bool isValidUsername(std::string str);
 };
 #endif //STRINGUTIL_H

@@ -172,3 +172,23 @@ void StringUtil::findIntersectionTest() {
     std::cout << "Second Test Case: "<<second << '\n';
     std::cout << "Third Test Case: " << third << '\n';
 }
+
+std::string StringUtil::LongestWord(const std::string& str) {
+    std::string temp;
+    std::string resText;
+    for (const char ch : str) {
+        if (isalnum(ch)) {
+            temp += ch;
+        }
+        else {
+            if (temp.size() > resText.size()) {
+                resText = temp;
+            }
+            temp = "";
+        }
+    }
+    if (temp.size() > resText.size()) {
+        resText = temp;
+    }
+    return resText;
+}

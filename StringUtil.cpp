@@ -120,3 +120,55 @@ bool StringUtil::isValidUsername(std::string str) {
     }
     return true;
 }
+
+std::vector<int> StringUtil::stringToVec(const std::string &str)
+{
+    std::vector<int> iVec;
+    std::string temp;
+    for (char i : str) {
+        if (i != ',' && i != ' ') {
+            temp += i;
+        }
+        else if (!temp.empty()) {
+            int val = std::stoi(temp);
+            iVec.emplace_back(val);
+            temp = "";
+        }
+    }
+    if (!temp.empty()) {
+        int val = std::stoi(temp);
+        iVec.emplace_back(val);
+    }
+    return iVec;
+}
+
+std::string StringUtil::FindIntersection(std::string strArr[]) {
+
+    std::vector<int> vecFirst = stringToVec(strArr[0]);
+    std::vector<int> vecSecond = stringToVec(strArr[1]);
+    std::string resText;
+    for (int i = 0; i < vecFirst.size(); ++i) {
+        for (int j = 0; j < vecSecond.size(); ++j) {
+            if (vecFirst[i] == vecSecond[j]) {
+                resText += std::to_string(vecFirst[i]);
+                resText += ',';
+            }
+        }
+    }
+    if (resText.empty()) {
+        return "false";
+    }
+    return resText.substr(0, resText.size() - 1);
+}
+
+void StringUtil::findIntersectionTest() {
+    std::string sArr1 []{"1, 3, 4, 7, 13", "1, 2, 4, 13, 15"};
+    std::string sArr2 []{"1, 3, 9, 10, 17, 18", "1, 4, 9, 10"};
+    std::string sArr3 []{"1, 2, 3, 4, 5", "6, 7, 8, 9, 10"};
+    auto first = FindIntersection(sArr1);
+    auto second = FindIntersection(sArr2);
+    auto third = FindIntersection(sArr3);
+    std::cout << "First Test Case: " << first << '\n';
+    std::cout << "Second Test Case: "<<second << '\n';
+    std::cout << "Third Test Case: " << third << '\n';
+}

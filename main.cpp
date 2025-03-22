@@ -62,6 +62,8 @@ int main() {
         current = current->next;
         delete temp;
     }
+    std::cout << "******************\n";
+    StringUtil::findIntersectionTest();
     return 0;
 }
 

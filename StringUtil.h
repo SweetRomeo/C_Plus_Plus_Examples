@@ -22,5 +22,6 @@ public:
     static std::vector<int> stringToVec(const std::string &str);
     static std::string FindIntersection(std::string strArr[]);
     static void findIntersectionTest();
+    static std::string LongestWord(const std::string& str);
 };
 #endif //STRINGUTIL_H

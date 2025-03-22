@@ -5,6 +5,7 @@
 #ifndef STRINGUTIL_H
 #define STRINGUTIL_H
 #include <string>
+#include <vector>
 
 class StringUtil {
 public:
@@ -18,5 +19,8 @@ public:
     static void printText(const char* str);
     static void printText(std::string& str);
     static bool isValidUsername(std::string str);
+    static std::vector<int> stringToVec(const std::string &str);
+    static std::string FindIntersection(std::string strArr[]);
+    static void findIntersectionTest();
 };
 #endif //STRINGUTIL_H

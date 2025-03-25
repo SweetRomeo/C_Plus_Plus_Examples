@@ -63,7 +63,7 @@ int main() {
         delete temp;
     }
     std::cout << "******************\n";
-    StringUtil::findIntersectionTest();
+    StringUtil::QuestionMarksTest();
     return 0;
 }
 

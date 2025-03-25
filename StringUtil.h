@@ -23,5 +23,7 @@ public:
     static std::string FindIntersection(std::string strArr[]);
     static void findIntersectionTest();
     static std::string LongestWord(const std::string& str);
+    static bool QuestionMarks(const std::string& str);
+    static void QuestionMarksTest();
 };
 #endif //STRINGUTIL_H

@@ -192,3 +192,40 @@ std::string StringUtil::LongestWord(const std::string& str) {
     }
     return resText;
 }
+
+bool StringUtil::QuestionMarks(const std::string &str) {
+    int prevNum = -1;
+    int questionMarksCount = 0;
+    bool foundPair = false;
+    for (const char ch : str) {
+        if (isdigit(ch)) {
+            const int currentNum = ch - '0';
+            if (prevNum != -1 && prevNum + currentNum == 10) {
+                if (questionMarksCount == 3) {
+                    foundPair = true;
+                }
+                else {
+                    return false;
+                }
+            }
+            prevNum = currentNum;
+            questionMarksCount = 0;
+        }
+        else if (ch == '?') {
+            questionMarksCount++;
+        }
+    }
+    return foundPair;
+}
+
+void StringUtil::QuestionMarksTest() {
+    std::string testCaseFirst = "arrb6???4xxbl5???eee5";
+    std::string testCaseSecond = "asjk1?4";
+    std::string testCaseThird = "asj2?";
+    std::string testCaseFourth = "asj3???7ajal";
+    std::cout << QuestionMarks(testCaseFirst) << '\n';
+    std::cout << QuestionMarks(testCaseSecond) << '\n';
+    std::cout << QuestionMarks(testCaseThird) << '\n';
+    std::cout << QuestionMarks(testCaseFourth) << '\n';
+}
+

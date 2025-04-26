@@ -229,3 +229,45 @@ void StringUtil::QuestionMarksTest() {
     std::cout << QuestionMarks(testCaseFourth) << '\n';
 }
 
+std::vector<std::string> StringUtil::getWords(const std::string &str) {
+    using namespace std;
+    vector<string> words;
+    string temp;
+    for (const char ch : str) {
+        if (ch != ' ') {
+            words.emplace_back(temp);
+            temp = "";
+        }
+        else {
+            temp += ch;
+        }
+    }
+    words.emplace_back(temp);
+    return words;
+}
+
+int StringUtil::countRepeatingLetters(const std::string &word) {
+    int count = 0;
+    for (int i = 0; i < word.size(); ++i) {
+        if (word.find(word[i]) != word.rfind(word[i]))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+std::string StringUtil::LetterCount(std::string str) {
+    using namespace std;
+    vector<string> wordVec = getWords(str);
+    int greatestRepeatingLetter = -1;
+    string greatestRepeatingText;
+    for (auto& word : wordVec) {
+        if (countRepeatingLetters(word) > greatestRepeatingLetter) {
+            greatestRepeatingLetter = countRepeatingLetters(word);
+            greatestRepeatingText = word;
+        }
+    }
+    return greatestRepeatingLetter == 0 ? "-1" : greatestRepeatingText;
+}
+

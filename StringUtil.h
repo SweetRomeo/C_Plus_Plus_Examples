@@ -25,5 +25,8 @@ public:
     static std::string LongestWord(const std::string& str);
     static bool QuestionMarks(const std::string& str);
     static void QuestionMarksTest();
+    static std::vector<std::string> getWords(const std::string& str);
+    static int countRepeatingLetters(const std::string& word);
+    static std::string LetterCount(std::string str);
 };
 #endif //STRINGUTIL_H
